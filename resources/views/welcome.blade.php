@@ -6,10 +6,13 @@
     <title>Inventario</title>
 </head>
 <body>
-    <h1> Mi aplicacion web de Inventario</h1>
+    <h1>Hola amigos</h1>
     <br>
     <h3>
-    <a href="{{ route ('cliente.index') }}"> Clientes </a>
+        <a href="{{ route ('cliente.index') }}"> Clientes </a>
     </h3>
+    <h4>
+        <a href="{{ route ('producto.index') }}"> Productos </a>
+    </h4>
 </body>
 </html>
