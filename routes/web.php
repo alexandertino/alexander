@@ -33,7 +33,13 @@ Route::get('/', function () {
 });
 
 Route::get('/cliente/index', [ClienteController::class, 'index'])->name('cliente.index');
+Route::get('/cliente/create', [ClienteController::class, 'create'])->name('cliente.create');
+Route::post('/cliente/store', [ClienteController::class, 'store'])->name('cliente.store');
+Route::get('/cliente/edit/{id}', [ClienteController::class, 'edit'])->name('cliente.edit');
+Route::post('/cliente/update', [ClienteController::class, 'update'])->name('cliente.update');
+Route::get('/cliente/delete/{id}', [ClienteController::class, 'delete'])->name('cliente.delete');
+Route::post('/cliente/destroy', [ClienteController::class, 'destroy'])->name('cliente.destroy');
+
 
 Route::get('/producto/index', [ProductoController::class, 'index'])->name('producto.index');
-
 Route::post('/producto/store', [ProductoController::class, 'store'])->name('producto.store');
