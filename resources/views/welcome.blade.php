@@ -12,7 +12,11 @@
         <a href="{{ route ('cliente.index') }}"> Clientes </a>
     </h3>
     <h4>
-        <a href="{{ route ('producto.index') }}"> Productos </a>
+        <a href="{{ route('producto.index') }}"> Productos </a>
     </h4>
+    <br>
+    <h3>
+        <a href="{{ route('categoria.index') }}"> Categorias </a>
+    </h3>
 </body>
 </html>

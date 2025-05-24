@@ -13,13 +13,17 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');                 
-            $table->text('descripcion')->nullable();  
-            $table->decimal('precio', 8, 2);  
-            $table->string('categoria')->nullable(); 
+            $table->unsignedBigInteger('categoria_id');
+            $table->foreign('categoria_id')->references('id')->on ('categorias');
+            $table->string('codigo');
+            $table->string('nombre');
+            $table->string('descripcion')->nullable();    
             $table->timestamps();
+    
+       
         });
     }
+
     /**
      * Reverse the migrations.
      */

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Productos</title>
+        <title>Clientes</title>
         
     </head>
     <style>
@@ -99,9 +99,9 @@
     </style>
 
     <body>
-        <h1>Productos</h1>
+        <h1>Clientes</h1>
  
-        <a href="{{ route('producto.create') }}">Agregar</a>
+        <a href="{{ route('categoria.create') }}">Agregar</a>
         <br>
         <br>
  
@@ -109,27 +109,23 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>categoria_id</th>
-                    <th>codigo</th>
-                    <th>nombre</th>
+                    <th>nombres</th>
                     <th>descripcion</th>
                     <th>editar</th>
                     <th>eliminar</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($Productos as $key => $producto)
+                @foreach ($categorias as $key => $categoria)
                 <tr>
                     <td>{{ $key+1 }}</td>
-                    <td>{{ $producto->categoria->nombre }}</td>
-                    <td>{{ $producto->codigo }}</td>
-                    <td>{{ $producto->nombre }}</td>
-                    <td>{{ $producto->descripcion }}</td>
+                    <td>{{ $categoria->nombre }}</td>
+                    <td>{{ $categoria->descripcion }}</td>
                     <td>
-                        <a href="{{ route('producto.edit', $producto->id) }}">Editar</a>
+                        <a href="{{ route('categoria.edit', $categoria->id) }}">Editar</a>
                     </td>
                     <td>
-                        <a href="{{ route('producto.delete', $producto->id) }}">eliminar</a>
+                        <a href="{{ route('categoria.delete', $categoria->id) }}">eliminar</a>
                     </td>
                 </tr>
                 @endforeach
